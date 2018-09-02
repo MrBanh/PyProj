@@ -25,7 +25,7 @@ PyProjShelf = shelve.open(os.path.join(PyProjShelfDir, 'PyProj'))
 
 
 def makeProjectDir(folder, projectName):
-    # :param: folder - absolute path, directory of where this script is located
+    # :param: folder - absolute path, parent directory of where this script is located
     # :param: projectName - name of new python project directory
     try:
         # Check for valid folder name
