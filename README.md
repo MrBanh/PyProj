@@ -26,10 +26,13 @@ Alternatively, you can create a .bat file in a directory that is already on your
         PyProj <project name>
         PyProj
 
-This script creates a new project folder with a few template files (such as a README.md, LICENSE.txt, and the <project name>.py)
+This script creates
 
-It also creates a <project name>.bat file in the parent directory of where the script is locate, with the included: @py.exe \...\<project name>.py inside the .bat file
+    - A new project folder with a few template files (such as a README.md, LICENSE.txt, and the <project name>.py)
+    - A <project name>.bat file in the parent directory of where the script is locate, with the included: @py.exe \...\<project name>.py  inside the .bat file
+    - A folder (PyProj_Shelf) that holds a record of all projects created with this script, and where they are stored.
   
 You can then add the parent directory to the PATH environment variable, and easily run all of your project scripts in terminal with:
 
     <project name> arg1 arg2 ...
+
