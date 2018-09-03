@@ -18,11 +18,11 @@ Alternatively, you can create a .bat file in a directory that is already on your
   - Save as "PyProj.bat"
   - With this, you can just type in the terminal:
   
-      PyProj save <project name>
-      PyProj remove <project name>
-      PyProj list
-      PyProj <project name>
-      PyProj
+    PyProj save <project name>
+    PyProj remove <project name>
+    PyProj list
+    PyProj <project name>
+    PyProj
 
 This script creates a new project folder with a few template files (such as a README.md, LICENSE.txt, and the <project name>.py)
 
