@@ -12,17 +12,19 @@ In terminal, you can type:
     
 Alternatively, you can create a .bat file in a directory that is already on your "Path" environment variable
   - For example, in the .bat file you can have
-    @py.exe C:\Folder\to\the\PyProj.py %*
-    @pause
+
+        @py.exe C:\Folder\to\the\PyProj.py %*
+        @pause
     
   - Save as "PyProj.bat"
+  
   - With this, you can just type in the terminal:
   
-    PyProj save <project name>
-    PyProj remove <project name>
-    PyProj list
-    PyProj <project name>
-    PyProj
+        PyProj save <project name>
+        PyProj remove <project name>
+        PyProj list
+        PyProj <project name>
+        PyProj
 
 This script creates a new project folder with a few template files (such as a README.md, LICENSE.txt, and the <project name>.py)
 
