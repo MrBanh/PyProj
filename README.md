@@ -28,8 +28,8 @@ Alternatively, you can create a .bat file in a directory that is already on your
 
 This script creates a new project folder with a few template files (such as a README.md, LICENSE.txt, and the <project name>.py)
 
-It also creates a <project name>.bat file in the parent directory of where the script is located
-  - also includes: @py.exe \...\<project name>.py inside the .bat file
+It also creates a <project name>.bat file in the parent directory of where the script is locate, with the included: @py.exe \...\<project name>.py inside the .bat file
   
 You can then add the parent directory to the PATH environment variable, and easily run all of your project scripts in terminal with:
-  - <project name> arg1 arg2 ...
+
+    <project name> arg1 arg2 ...
