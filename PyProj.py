@@ -72,9 +72,6 @@ def makeProjectDir(folder, projectName):
 if len(sys.argv) == 3 and sys.argv[1].lower() == 'add':
     if sys.argv[2].lower() != 'list':
 
-        # Store current working directory
-        currDir = os.getcwd()
-
         # Change to this script's directory
         os.chdir(scriptPath[0])
 
@@ -92,9 +89,6 @@ if len(sys.argv) == 3 and sys.argv[1].lower() == 'add':
         # Copy the new project directory to clipboard
         pyperclip.copy(f'{PyProjShelf[sys.argv[2]]}')
         print('\nCopied location to clipboard.\n')
-
-        # Change back to new project directory
-        os.chdir(PyProjShelf[sys.argv[2]])
 
     else:
         print('"list" is an argument in this script. \nPlease try a different project name')
