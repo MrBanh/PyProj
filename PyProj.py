@@ -41,15 +41,18 @@ def makeProjectDir(folder, projectName):
         os.mkdir(projectDir)
 
         # licenseFile = open(os.path.join(projectDir, 'LICENSE.txt'), 'w')
-        # readmeFile = open(os.path.join(projectDir, 'README.md'), 'w')
+        readmeFile = open(os.path.join(projectDir, 'README.md'), 'w')
+        # TODO: write to README.md file
+
         pythonFile = open(os.path.join(projectDir, f'{projectName}.py'), 'w')
+        # TODO: write to the new python file
 
         # Create a .bat file in the parent (of this script) directory
         batFile = open(os.path.join(folder, f'{projectName}.bat'), 'w')
         batFile.write(f'@py.exe {os.path.join(projectDir, projectName)}.py %* \n@pause')
 
         # licenseFile.close()
-        # readmeFile.close()
+        readmeFile.close()
         pythonFile.close()
         batFile.close()
 
@@ -90,8 +93,8 @@ if len(sys.argv) == 3 and sys.argv[1].lower() == 'add':
         pyperclip.copy(f'{PyProjShelf[sys.argv[2]]}')
         print('\nCopied location to clipboard.\n')
 
-        # Change back to previous directorys
-        os.chdir(currDir)
+        # Change back to new project directory
+        os.chdir(PyProjShelf[sys.argv[2]])
 
     else:
         print('"list" is an argument in this script. \nPlease try a different project name')
