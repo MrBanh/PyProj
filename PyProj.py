@@ -11,6 +11,7 @@ import re
 import sys
 import shelve
 import send2trash
+import pyperclip
 
 scriptPath = os.path.split(__file__)
 
@@ -52,7 +53,7 @@ def makeProjectDir(folder, projectName):
         pythonFile.close()
         batFile.close()
 
-        print('Done')
+        print()
 
     except FileExistsError:
         print('Project folder already exists. Please run again...')
@@ -84,6 +85,10 @@ if len(sys.argv) == 3 and sys.argv[1].lower() == 'add':
         PyProjShelf[sys.argv[2]] = os.path.join(os.getcwd(), sys.argv[2])
         
         print(f'Created project folder: {sys.argv[2]} \nLocation: {PyProjShelf[sys.argv[2]]}')
+
+        # Copy the new project directory to clipboard
+        pyperclip.copy(f'{PyProjShelf[sys.argv[2]]}')
+        print('\nCopied location to clipboard.\n')
 
         # Change back to previous directorys
         os.chdir(currDir)
@@ -129,9 +134,11 @@ elif len(sys.argv) == 2:
         for proj in PyProjShelf:
             print(f'{proj:<20}- {PyProjShelf[proj]}')
 
-    # Show the location of a project directory created with this script
+    # Show and copy the location of a project directory created with this script
     elif PyProjShelf.__contains__(sys.argv[1]):
-        print(f'{sys.argv[1]} Located at: {PyProjShelf[sys.argv[1]]}')
+        print(f'\n{sys.argv[1]} Located at: {PyProjShelf[sys.argv[1]]}')
+        pyperclip.copy(f'{PyProjShelf[sys.argv[1]]}')
+        print('\nCopied location to clipboard.\n')
 
     # Otherwise, tell user that a project directory was never created
     else:
