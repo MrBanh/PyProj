@@ -124,10 +124,10 @@ elif len(sys.argv) == 3 and sys.argv[1] == 'remove':
 elif len(sys.argv) == 2:
     if sys.argv[1] == 'list':
         # Show all projects and their directories
-        print(f'\n{"Projects":<10}  Location')
-        print(f'{"--------":<10}  --------')
+        print(f'\n{"Projects":<20}  Location')
+        print(f'{"--------":<20}  --------')
         for proj in PyProjShelf:
-            print(f'{proj:<10}- {PyProjShelf[proj]}')
+            print(f'{proj:<20}- {PyProjShelf[proj]}')
 
     # Show the location of a project directory created with this script
     elif PyProjShelf.__contains__(sys.argv[1]):
