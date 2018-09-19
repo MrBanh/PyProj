@@ -42,10 +42,11 @@ def makeProjectDir(folder, projectName):
 
         # licenseFile = open(os.path.join(projectDir, 'LICENSE.txt'), 'w')
         readmeFile = open(os.path.join(projectDir, 'README.md'), 'w')
-        # TODO: write to README.md file
+        readmeFile.write(f'# {projectName}.py\n\n')
 
         pythonFile = open(os.path.join(projectDir, f'{projectName}.py'), 'w')
-        # TODO: write to the new python file
+        pythonFile.write('#! python3\n\n')
+        pythonFile.write(f'# {projectName}.py - ')
 
         # Create a .bat file in the parent (of this script) directory
         batFile = open(os.path.join(folder, f'{projectName}.bat'), 'w')
