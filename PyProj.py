@@ -50,7 +50,7 @@ def makeProjectDir(folder, projectName):
 
         # Create a .bat file in the parent (of this script) directory
         batFile = open(os.path.join(folder, f'{projectName}.bat'), 'w')
-        batFile.write(f'@py.exe {os.path.join(projectDir, projectName)}.py %* \n@pause')
+        batFile.write(f'@py.exe "{os.path.join(projectDir, projectName)}.py" %* \n@pause')
 
         # licenseFile.close()
         readmeFile.close()
