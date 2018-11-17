@@ -88,7 +88,7 @@ if len(sys.argv) == 3 and sys.argv[1].lower() == 'add':
         print(f'Created project folder: {sys.argv[2]} \nLocation: {PyProjShelf[sys.argv[2]]}')
 
         # Copy the new project directory to clipboard
-        pyperclip.copy(f'{PyProjShelf[sys.argv[2]]}')
+        pyperclip.copy(f'"{PyProjShelf[sys.argv[2]]}"')
         print('\nCopied location to clipboard.\n')
 
     else:
@@ -135,7 +135,7 @@ elif len(sys.argv) == 2:
     # Show and copy the location of a project directory created with this script
     elif PyProjShelf.__contains__(sys.argv[1]):
         print(f'\n{sys.argv[1]} Located at: {PyProjShelf[sys.argv[1]]}')
-        pyperclip.copy(f'{PyProjShelf[sys.argv[1]]}')
+        pyperclip.copy(f'"{PyProjShelf[sys.argv[1]]}"')
         print('\nCopied location to clipboard.\n')
 
     # Otherwise, tell user that a project directory was never created
