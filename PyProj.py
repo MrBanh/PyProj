@@ -147,7 +147,7 @@ elif len(sys.argv) == 1:
     print()
     print(f"Add the directory of this file to the environment variable: {scriptPath[0]}")
     print('\tIn Terminal:')
-    print('\t\tPyProj.py save <project name> - creates project directory')
+    print('\t\tPyProj.py add <project name> - creates project directory')
     print('\t\tPyProj.py remove <project name> - removes project directory')
     print('\t\tPyProj.py list - Shows all projects and directories')
     print('\t\tPyProj.py <project name> - Shows where project directory is located')
